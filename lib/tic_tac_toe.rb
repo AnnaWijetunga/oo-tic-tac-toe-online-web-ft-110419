@@ -168,3 +168,8 @@ end
 
 game = TicTacToe.new
 game.play
+
+puts "Welcome to Tic Tac Toe!"
+display_board(this_game) 
+
+play(this_game) 
