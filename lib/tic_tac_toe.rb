@@ -153,9 +153,9 @@ class TicTacToe
     end
   end
   
-end
-
 puts "Welcome to Tic Tac Toe!"
 display_board(this_game) 
 
 play(this_game) 
+
+end
