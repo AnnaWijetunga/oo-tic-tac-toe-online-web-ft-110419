@@ -86,5 +86,5 @@ class TicTacToe
     else
       turn
     end
-
+  end 
 end
