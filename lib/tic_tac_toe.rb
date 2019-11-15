@@ -167,10 +167,5 @@ class TicTacToe
 end
 
 puts "Welcome to Tic Tac Toe!"
-# game = TicTacToe.new
-# game.play
-
-
-display_board(this_game) 
-
-play(this_game) 
+game = TicTacToe.new
+game.play
