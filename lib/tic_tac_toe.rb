@@ -44,15 +44,6 @@ class TicTacToe
   def valid_move?(index)
     index.between?(0,8) && !position_taken?(index)
   end
-  
-  # def valid_move?(index)
-  #   index.between?(0,8) == false  
-  #   if position_taken?(index)
-  #     return false 
-  #   else 
-  #     return true  
-  #   end 
-  # end
 
   def turn_count
     turn = 0
@@ -65,7 +56,6 @@ class TicTacToe
   end
   
   def current_player
-  #if the turn count is an even number, that means O just went, so the next/current player is X
     num_turns = turn_count
     if num_turns % 2 == 0
       player = "X"
