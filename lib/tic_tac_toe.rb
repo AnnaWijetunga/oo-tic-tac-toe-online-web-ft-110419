@@ -44,19 +44,6 @@ class TicTacToe
   def valid_move?(index)
     index.between?(0,8) && !position_taken?(index)
   end
-  
-  def turn
-    puts "Please enter 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
-    char = current_player
-    if valid_move?(index)
-      move(index, char)
-      display_board
-    else
-      turn
-    end
-  end
 
   def turn_count
     turn = 0
@@ -77,45 +64,19 @@ class TicTacToe
     end
     return player
   end
- 
-  # def turn
-  #   puts "Please enter 1-9:"
-  #   input = gets.strip
-  #   index = input_to_index(input)
-  #   char = current_player
-  #   if valid_move?(index)
-  #     move(index, char)
-  #     display_board
-  #   else
-  #     turn
-  #   end
-  # end
-  
-  # def turn
-  #   puts "Please enter 1-9:"
-  #   input = gets.chomp
-  #   index = input_to_index(input)
-  #   if valid_move?(index)
-  #     move(index, token = current_player)
-  #   else
-  #     turn
-  #   end
-  #   display_board
-  # end
-  
-  # def turn
-  #   puts "Please enter 1-9:"
-  #   input = gets.strip
-  #   index = input_to_index(input)
-  #   char = current_player
-  #   if valid_move?(index)
-  #     move(index, char)
-  #     display_board
-  #   else
-  #     turn
-  #   end
-  # end
-  
+
+  def turn
+    puts "Please enter 1-9:"
+    input = gets.chomp
+    index = input_to_index(input)
+    if valid_move?(index)
+      move(index, token = current_player)
+    else
+      turn
+    end
+    display_board
+  end
+
   def won?
     WIN_COMBINATIONS.each {|win_combo|
       index_0 = win_combo[0]
